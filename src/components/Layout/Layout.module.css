@@ -1,0 +1,25 @@
+
+
+.list{
+        display: flex;
+            list-style: none;
+            gap: 30px;
+            padding: 0;
+            margin: 0;
+            padding-left: 20px;
+            padding-top: 20px;
+            padding-bottom: 10px;
+                border-bottom: 1px solid;
+                border-color: grey;
+                    background-color: lightsteelblue;
+                    box-shadow: 0 0 5px;
+}
+.list a {
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+}
+
+.list a:hover{
+    color: dimgray;
+}

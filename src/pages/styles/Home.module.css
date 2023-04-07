@@ -1,0 +1,18 @@
+.title{
+        margin-left: 20px;
+            font-size: 30px;
+            color: cornflowerblue;
+}
+
+
+.list a{
+text-decoration: none;
+font-size: 20px;
+    color: black;
+   
+}
+
+.list a:hover {
+  color: dimgray;
+   
+}
