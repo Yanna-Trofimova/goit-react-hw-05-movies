@@ -60,12 +60,14 @@ const Movies = () => {
                 />
             <button type="submit" className={css.btn} >Search</button>
             
-                {filteredMovies.map(film => {
+                
+        </form>
+        <div>
+        {filteredMovies.map(film => {
                     return <li key={film.id}>
                         <Link to={`${film.id}`} state={{ from: location }}> {film.title} </Link>
                     </li>
-                })}
-            </form>
+                })}</div>
     </div>
 }
 
