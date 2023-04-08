@@ -3,6 +3,7 @@ import { lazy } from "react";
 import { Route, Routes } from "react-router";
 import Cast from "./Cast/Cast";
 import Layout from "./Layout/Layout";
+import NonExistentPage from "./NonExistentPage/NonExistentPage";
 import Reviews from "./Reviews/Reviews";
 
 const Home = lazy(() => import("../pages/Home"));
@@ -19,9 +20,11 @@ export const App = () => {
          <Route path="movies/:movieId" element={<MoviesDetails />}>
             <Route path="cast" element={<Cast />} />
             <Route path="reviews" element={<Reviews/>} />
-          </Route>
+        </Route >
+        <Route path="*" element={<NonExistentPage/>} />
        </Route>
       </Routes>
       
   );
 };
+ 

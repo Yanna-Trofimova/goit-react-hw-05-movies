@@ -12,6 +12,9 @@ const MoviesDetails = () => {
     const { movieId } = useParams();
     const location = useLocation();
     const backLinkLocationRef = useRef(location.state?.from ?? '/');
+    console.log('location novie details', location)
+    console.log('backLinkLocationRef' , backLinkLocationRef)
+    // console.log(film)
     
     useEffect(() => {
      
@@ -62,5 +65,6 @@ const MoviesDetails = () => {
         </Suspense>
     </>
 }
+
 
 export default MoviesDetails;

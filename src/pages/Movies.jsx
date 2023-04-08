@@ -7,10 +7,13 @@ const Movies = () => {
     const [filteredMovies, setFilteredMovies] = useState([]);
     const [searchParams, setSearchParams] = useSearchParams();
     const [, setError] = useState(null);
-     const [name, setName] = useState('');
-    
+   
     const text = searchParams.get('movie') || '' ;
+    const [name, setName] = useState(text);
+
     const location = useLocation();
+
+   
 
     useEffect(() => {
         if (!text) {
@@ -44,6 +47,7 @@ const Movies = () => {
        
         setFilteredMovies([]);
         setSearchParams({ movie: name });
+        // setName(text)
     }
 
 
@@ -56,7 +60,8 @@ const Movies = () => {
                  className={css.input}
                     type="text"
                     value={name}
-                    onChange={handelChange}
+                onChange={handelChange}
+                
                 />
             <button type="submit" className={css.btn} >Search</button>
             
